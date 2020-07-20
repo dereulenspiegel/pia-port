@@ -1,0 +1,11 @@
+github.com/coreos/go-iptables v0.3.0 h1:UTQkjHl9rPwwtXZhXbY3T932cV9aUnKlSsZ7YGfJVXM=
+github.com/coreos/go-iptables v0.3.0/go.mod h1:/mVI274lEDI2ns62jHCDnCyBF9Iwsmekav8Dbxlm1MU=
+github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
+github.com/hekmon/cunits v0.0.0-20180331133712-51d28939d973 h1:4B7XhnchdWLNHhsvwUcPCKiq0tWQZIB32+lYyZ+zxS0=
+github.com/hekmon/cunits v0.0.0-20180331133712-51d28939d973/go.mod h1:0QdfIGGkucx1VgStMNiHOYn84t/Ru65b+D3z1QszVPc=
+github.com/hekmon/transmissionrpc v0.0.0-20180424111414-5b3773fb2ea3 h1:hhhIx7zJO/tUuw2oRDCCeMbOT1rnnvTW809JPr/NNzw=
+github.com/hekmon/transmissionrpc v0.0.0-20180424111414-5b3773fb2ea3/go.mod h1:b1R6hlzo+gEUNWGh53mw9mPWyYyODdZu/qlVqT+W+PU=
+github.com/mitchellh/go-homedir v0.0.0-20180523094522-3864e76763d9 h1:Y94YB7jrsihrbGSqRNMwRWJ2/dCxr0hdC2oPRohkx0A=
+github.com/mitchellh/go-homedir v0.0.0-20180523094522-3864e76763d9/go.mod h1:SfyaCUpYCn1Vlf4IUYiD9fPX4A5wJrkLzIz1N1q0pr0=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/stretchr/testify v1.2.2/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
