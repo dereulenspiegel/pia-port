@@ -59,7 +59,7 @@ func main() {
 		log.Println("Transmission peer port still seems to be open, aborting")
 		return
 	}
-
+	log.Printf("Transmission port %d is closed, update needed\n", oldPort)
 	if oldPort != -1 {
 		log.Printf("Deleting rules for port %d", oldPort)
 		if err := DeleteOldRules(oldPort); err != nil {
@@ -75,16 +75,20 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to request new open port from PIA: %s %#v", err, err)
 	}
-
-	if err := transmissionUpdater.UpdateOpenPort(oldPort, newPort); err != nil {
-		log.Printf("Failed to update port on transmission: %s %#v", err, err)
-	}
+	log.Printf("Got port %d from PIA to forward\n", newPort)
 
 	if err := saveOldPort(userDir, newPort); err != nil {
 		log.Printf("Failed to save requested port %d as old port. Take care to remove old firewall rules manually. %#v", newPort, err)
 	}
+
+	log.Printf("Creating iptable rules for port %d\n", newPort)
 	if err := CreateNewRule(newPort); err != nil {
 		log.Fatalf("Failed to create new firewall rules for open port %d: %s %#v", newPort, err, err)
+	}
+
+	log.Printf("Updating transmission to use port %d instead of old port %d\n", newPort, oldPort)
+	if err := transmissionUpdater.UpdateOpenPort(oldPort, newPort); err != nil {
+		log.Printf("Failed to update port on transmission: %s %#v", err, err)
 	}
 
 }
